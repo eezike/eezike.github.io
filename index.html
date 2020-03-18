@@ -20,7 +20,12 @@ Article: https-medium-com-hackyroot-happy-birthday-using-aframe-9d2f0d177853
         <!-- we've commnted it because it takes too much time to download and play this audio file           
         <audio id="bday" src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/bday.mp3"></audio> 
         -->
-        <audio id="bday" src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/bday.mp3" autostart="0" type="audio/mpeg" autoplay="false"></audio>
+
+        <audio id="bday" autoplay="false">
+          <source src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/bday.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
     </a-assets>
 
 
@@ -40,4 +45,8 @@ Article: https-medium-com-hackyroot-happy-birthday-using-aframe-9d2f0d177853
 
 </a-scene>
 </body>
+<script>
+    var x = document.getElementById("bday");
+    //x.pause();
+</script>
 </html>
