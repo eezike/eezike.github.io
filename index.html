@@ -43,7 +43,16 @@ Article: https-medium-com-hackyroot-happy-birthday-using-aframe-9d2f0d177853
 </a-scene>
 </body>
 <script>
-    var x = document.getElementById("bday");
-    //x.pause();
+AFRAME.registerComponent('soundhandler', {
+    tick: function () {
+           var entity = document.querySelector('[sound]');
+         if (document.querySelector('a-marker').object3D.visible == true) {
+            entity.components.sound.playSound();
+        } else {
+            entity.components.sound.pauseSound();
+        }
+
+     }
+});
 </script>
 </html>
